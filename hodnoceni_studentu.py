@@ -27,7 +27,7 @@ class StudentsGrades:
     def find(self, score):
         index= []
         for i in range(len(self.scores)):
-            if self.socres[i] == scores:
+            if self.scores[i] == scores:
                 index.append(i)
         return index
     def get_sorted(self):
@@ -50,21 +50,21 @@ class StudentsGrades:
                 left= midd + 1
             else: right = midd + 1
         return None
-    def main():
-        results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
-        print(results.count())
-        for i in range(results.count()):
-            print(f"student{i}: {results.get_by_index(i)} points - {results.get_grade(i)}")
+def main():
+    results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
+    print(results.count())
+    for i in range(results.count()):
+        print(f"student{i}: {results.get_by_index(i)} points - {results.get_grade(i)}")
 
-            print(results.finf(100))
-            print(results.get_sorted())
-            from sorting import random_numbers
-            random_results = StudentsGrades(random_numbers(30, 0, 100))
-            print(random_results.count())
-            print(random_results.get_sorted())
+        print(results.find(100))
+        print(results.get_sorted())
+        from sorting import random_numbers
+        random_results = StudentsGrades(random_numbers(30, 0, 100))
+        print(random_results.count())
+        print(random_results.get_sorted())
 
-            print(results.find_sorted(91))
-            print(results.find_sorted(50))
-            print(results.find_sorted(77))
-    if __name__ == "__main__":
-        main()
+        print(results.find_sorted(91))
+        print(results.find_sorted(50))
+        print(results.find_sorted(77))
+if __name__ == "__main__":
+    main()
